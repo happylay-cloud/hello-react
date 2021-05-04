@@ -24,8 +24,14 @@
 
   // 1.创建类式组件
   class Demo extends React.Component {
+    constructor(props) {
+      super(props)
+      this.state = {
+        isHot: false
+      }
+    }
     render() {
-      return <h2> 类式组件 </h2>
+      return <h2> 类式组件，{this.state.isHot ? '真' : '假'} </h2>
     }
   }
 
