@@ -3,6 +3,7 @@ import Home from './views/home'
 import Login from './views/login'
 import List from './views/list'
 import {   BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Button } from 'antd'
 
 function App() {
   return (
@@ -16,9 +17,8 @@ function App() {
           <Route path="/login" component={Login}></Route>
           <Route path="/list" component={List}></Route>
        </Switch>
-
       </Router>
-  
+    <Button type="primary">按钮</Button>
     </div>
   );
 }
