@@ -1,5 +1,5 @@
-```
-npx create-react-app react-app          
+### 1.npx create-react-app react-app 
+         
+### 2.npm i react-router -S
 
-npm install react-router-dom
-```
+### 3.npm i react-router-dom -S
