@@ -1,10 +1,12 @@
 import React from "react";
 
 class JsxTest extends React.Component {
+  inputRef = React.createRef();
   showData = () => {
     const { input3 } = this;
     console.log(input3);
     console.log(this.refs.input.value);
+    console.log(this.inputRef.current);
   };
   getRef = (e) => {
     console.log(e);
@@ -12,6 +14,7 @@ class JsxTest extends React.Component {
   render() {
     return (
       <div>
+        <input ref={this.inputRef} type="text" />
         <input ref="input" type="text" />
         <button ref="input2" onClick={this.showData}>
           点我
