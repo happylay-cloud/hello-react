@@ -2,7 +2,12 @@ import React from "react";
 
 class JsxTest extends React.Component {
   showData = () => {
+    const { input3 } = this;
+    console.log(input3);
     console.log(this.refs.input.value);
+  };
+  getRef = (e) => {
+    console.log(e);
   };
   render() {
     return (
@@ -13,6 +18,14 @@ class JsxTest extends React.Component {
         </button>
         <input onBlur={this.showData} type="text" />
         失去焦点
+        <input
+          ref={(currentNode) => {
+            this.input3 = currentNode;
+          }}
+          placeholder="回调函数"
+          type="text"
+        />
+        <input type="text" placeholder="优化" ref={this.getRef} />
       </div>
     );
   }
