@@ -11,10 +11,23 @@ class JsxTest extends React.Component {
   getRef = (e) => {
     console.log(e);
   };
+  saveDate = (arg) => {
+    return (event) => {
+      console.log(arg);
+      console.log(event.target);
+      this.setState({
+        [arg]: event.target.value,
+      });
+    };
+  };
   render() {
     return (
       <div>
-        <input ref={this.inputRef} type="text" />
+        <input
+          ref={this.inputRef}
+          onChange={this.saveDate("username")}
+          type="text"
+        />
         <input ref="input" type="text" />
         <button ref="input2" onClick={this.showData}>
           点我
